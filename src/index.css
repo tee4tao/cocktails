@@ -1,13 +1,358 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f5f8;
+}
+main {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+}
+/*
+===========
+nav
+===========
+*/
+nav {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.504);
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 42rem;
+  margin: 1rem;
+}
+.nav-logo {
+  height: 1.8rem;
+  width: 11.5rem;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 7.5rem;
+}
+.link {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.link * {
+  text-decoration: none;
+  color: #222222;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 73rem;
+  }
+}
+/*
+===========
+about page
+===========
+*/
+.about-page {
+  max-width: 42rem;
+  display: grid;
+  place-items: center;
+}
+.about-page h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: #222222;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.about-page p {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: #222222;
+  line-height: 1.5;
+  margin: 0 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+===========
+error page
+===========
+*/
+.error-heading {
+  text-transform: capitalize;
+  color: #222222;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+.home-btn {
+  border: transparent;
+  background-color: #476a2e;
+  width: 8rem;
+  height: 2rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+.home-btn:hover {
+  background-color: #d4e6a5;
+  color: #476a2e;
+}
+/*
+===========
+home page
+===========
+*/
+.home-page {
+  width: 100vw;
+  max-width: 42rem;
+  display: grid;
+  place-items: center;
+}
+.form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 8rem;
+  margin-top: 3rem;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.504);
+}
+.form label {
+  text-transform: capitalize;
+  color: #476a2e;
+  letter-spacing: 3px;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#search {
+  width: 90%;
+  height: 2.5rem;
+  margin: 0 auto;
+  border: transparent;
+  background-color: #f1f5f8;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+.home-heading {
+  font-size: 2rem;
+  margin: 5rem 0;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+.container {
+  width: 100%;
+  display: grid;
+  /* place-items: center; */
+  grid-template-columns: repeat(auto-fit, minmax(20.6rem, 1fr));
+  gap: 1rem;
+}
+.drinks-details {
+  background-color: white;
+  margin-bottom: 3rem;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.504);
+  transition: all linear 0.3s;
+}
+.drinks-details:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.504);
+}
+.drink-img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+.drink-info {
+  margin: 1rem 0 1rem 1rem;
+}
+.drink-name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+  color: #222222;
+}
+.drink-glass {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+  color: #222222;
+}
+.drink-type {
+  color: #afafaf;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+.details-btn {
+  border: transparent;
+  background-color: #476a2e;
+  width: 6rem;
+  height: 2rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+  margin-bottom: 0.5rem;
+}
+.details-btn:hover {
+  background-color: #d4e6a5;
+  color: #476a2e;
+}
+.no-cocktails {
+  margin-top: 3rem;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: #222222;
+}
+
+@media screen and (min-width: 800px) {
+  .home-page {
+    max-width: 73rem;
+  }
+  .form {
+    width: 100%;
+    max-width: 42rem;
+  }
+}
+
+/*
+===========
+cocktail page
+===========
+*/
+.cocktail-page {
+  width: 100vw;
+  max-width: 42rem;
+  display: grid;
+  place-items: center;
+}
+.drinks-container {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.cocktail-name {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.cocktail-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20.6rem, 1fr));
+  /* place-items: center; */
+  align-items: center;
+  gap: 1rem;
+}
+.cocktail-img {
+  width: 100%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.more-info * {
+  margin: 1.3rem 0;
+  font-size: 1.05rem;
+}
+.title {
+  color: #476a2e;
+  background-color: #d4e6a5;
+  text-transform: capitalize;
+  margin-right: 1rem;
+  padding: 7px;
+  border-radius: 5px;
+}
+.answer {
+  line-height: 1.5;
+  text-transform: capitalize;
+  /* word-spacing: 3px; */
+  color: #222222;
+}
+@media screen and (min-width: 800px) {
+  .cocktail-page {
+    max-width: 73rem;
+  }
+  /* .cocktail-img {
+    height: 28rem;
+    max-width: 28rem;
+  } */
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #476a2e;
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 20rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
 }
