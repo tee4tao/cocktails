@@ -15,7 +15,9 @@ export let Home = () => {
   }
 
   let searchDrink = () => {
-    setSearchTerm(refContainer.current.value);
+    let filterTimeout = setTimeout(() => {
+      setSearchTerm(refContainer.current.value);
+    }, 1500);
   };
   let handleSubmit = (e) => {
     e.preventDefault(); // this prevent the page from reloading anytime we click enter while typing in the input
